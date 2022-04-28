@@ -81,6 +81,7 @@ header h1 {
 /* OPERATION */
 .operation {
     padding: 0 20px;
+    margin-bottom: 50px;
 }
 
 .operation-card {
@@ -128,4 +129,43 @@ header h1 {
 
 .operation-card:hover i {
     color: #9356DC;
+}
+
+/* RESTAURANT */
+
+.restaurant {
+    padding: 40px 20px;
+    background-color: #F5F5F5;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #303030;
+    padding: 30px 25px;
+    color: white;
+}
+
+.footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: larger;
+    font-weight: 100;
+    margin: 0 0 20px 0;
+}
+
+.footer p {
+    cursor: pointer;
+}
+
+.fa-utensils {
+    margin-right: 14px;
+}
+
+.fa-hands-helping {
+    margin-right: 8px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
 }
