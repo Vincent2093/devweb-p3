@@ -156,11 +156,16 @@ header h1 {
 }
 
 .restaurant-card-body {
-    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 14px;
+    margin-bottom: 14px;
 }
 
 .restaurant-card-text h3 {
     margin: 18px 0 8px 0;
+    
 }
 
 .restaurant-card-new {
@@ -170,9 +175,21 @@ header h1 {
     font-size: 14px;
     font-weight: bold;
     padding: 7px 12px;
-    color: #008766;
     background-color: #99E2D0;
-    border-radius: 4px;
+    color: #378a75;
+    border-radius: 2px;
+  }
+
+  .fa-heart {
+      font-size: x-large;
+      transition: background 1s ease-out;
+  }
+
+  .fa-heart:hover {
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
   }
 
 /* FOOTER */
