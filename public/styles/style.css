@@ -23,7 +23,10 @@ body {
 }
 
 @keyframes fog {
-    to { opacity: 0; }
+    to  {
+            opacity: 0;
+            z-index: -1;
+        }
 }
 
 .spinner {
@@ -210,19 +213,19 @@ header h1 {
     background-color: #99E2D0;
     color: #378a75;
     border-radius: 2px;
-  }
+}
 
-  .fa-heart {
-      font-size: x-large;
-      transition: background;
-  }
+.fa-heart {
+    font-size: x-large;
+    transition: background;
+}
 
-  .fa-heart:hover {
+.fa-heart:hover {
     background: linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
-  }
+}
 
 /* FOOTER */
 
