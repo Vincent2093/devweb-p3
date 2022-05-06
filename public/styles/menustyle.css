@@ -16,6 +16,15 @@ header h1 {
     padding: 10px;
 }
 
+header i {
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    font-size: x-large;
+    color: black;
+}
+
+/* MENU */
 main img {
     display: block;
     width: 100%;
@@ -24,7 +33,6 @@ main img {
     object-position: top
 }
 
-/* MENU */
 .menu {
     position: relative;
     margin-top: -40px;
@@ -37,6 +45,7 @@ main img {
     justify-content: space-between;
     align-items: center;
     margin: 0 20px;
+    padding-top: 10px;
 }
 
 .fa-heart {
@@ -49,6 +58,7 @@ main img {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .menu-top h2 {
@@ -56,6 +66,70 @@ main img {
     letter-spacing: 1px;
 }
 
+/* MENU STARTER */
+.menu-group {
+    margin: 0 20px;
+}
+
+.menu-group h3 {
+    font-weight: 400;
+    position: relative;
+    margin: 18px 0 22px 0;
+}
+
+.menu-group h3::after {
+    content: "";
+    background-color: #99E2D0;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 45px;
+    height: 3px;
+  }
+
+.menu-card h4 {
+    font-size: larger;
+    margin: 0 0 10px 0;
+}
+
+.menu-card {
+    background-color: white;
+    padding: 15px 25px 15px 10px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,0.20);
+    margin-bottom: 20px;
+}
+
+.menu-card-description {
+display: flex;
+justify-content: space-between;
+}
+
+.price {
+    font-weight: bold;
+}
+
+/* ORDER BUTTON */
+.order {
+    display: flex;
+    justify-content: center;
+}
+
+.order a {
+    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    border-radius: 30px;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    margin: 40px 0;
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,0.4);
+    transition: 1s;
+}
+
+.order a:hover {
+    opacity: 0.8;
+    box-shadow: 0px 10px 20px -10px #000000;
+}
 
 /* FOOTER */
 
