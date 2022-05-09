@@ -98,7 +98,56 @@ main img {
     border-radius: 15px;
     box-shadow: 0 10px 20px -10px rgba(0,0,0,0.20);
     margin-bottom: 20px;
+    animation: appear 2s backwards;
 }
+
+@keyframes appear {
+    0% {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.card-1 {
+    animation-delay: 0ms;
+}
+
+.card-2 {
+    animation-delay: 200ms;
+}
+
+.card-3 {
+    animation-delay: 400ms;
+}
+
+.card-4 {
+    animation-delay: 600ms;
+}
+
+.card-5 {
+    animation-delay: 800ms;
+}
+
+.card-6 {
+    animation-delay: 1000ms;
+}
+
+.card-7 {
+    animation-delay: 1200ms;
+}
+
+.card-8 {
+    animation-delay: 1400ms;
+}
+
+.card-9 {
+    animation-delay: 1600ms;
+}
+
 
 .menu-card-description {
 display: flex;
