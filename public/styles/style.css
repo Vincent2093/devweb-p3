@@ -172,7 +172,7 @@ header h1 {
 
 /* RESTAURANT */
 
-.restaurant {
+#restaurant {
     padding: 40px 20px;
     background-color: #F5F5F5;
 }
@@ -219,16 +219,29 @@ header h1 {
     border-radius: 2px;
 }
 
-.fa-heart {
+.heart .empty {
     font-size: x-large;
-    transition: background 1s ease;
+    position: absolute;
 }
 
-.fa-heart:hover {
+.heart .fill {
     background: linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
+    font-size: x-large;
+    position: relative;
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+
+.heart .fill:hover {
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    opacity: 1;
+    transition: all 1s ease;
 }
 
 /* FOOTER */

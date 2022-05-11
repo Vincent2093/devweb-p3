@@ -48,17 +48,31 @@ main img {
     padding-top: 10px;
 }
 
-.fa-heart {
+.heart .empty {
     font-size: x-large;
-    transition: background;
+    position: absolute;
+    cursor: pointer;
 }
 
-.fa-heart:hover {
+.heart .fill {
     background: linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
+    font-size: x-large;
+    position: relative;
+    opacity: 0;
+    transition: all 1s ease-in;
     cursor: pointer;
+}
+
+.heart .fill:hover {
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    opacity: 1;
+    transition: all 1s ease;
 }
 
 .menu-top h2 {
@@ -90,15 +104,19 @@ main img {
 .menu-card h4 {
     font-size: larger;
     margin: 0 0 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .menu-card {
+    display: flex;
     background-color: white;
-    padding: 15px 25px 15px 10px;
     border-radius: 15px;
     box-shadow: 0 10px 20px -10px rgba(0,0,0,0.20);
     margin-bottom: 20px;
     animation: appear 2s backwards;
+    overflow: hidden;
 }
 
 @keyframes appear {
@@ -148,14 +166,59 @@ main img {
     animation-delay: 1600ms;
 }
 
-
 .menu-card-description {
-display: flex;
-justify-content: space-between;
+    margin: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .price {
     font-weight: bold;
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 25px;
+    margin-bottom: 12px;
+}
+
+.menu-card .tag {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-right: -75px;
+    padding: 25px;
+    border-radius: 0 15px 15px 0;
+    transition: all 1s;
+    background-color: #99E2D0;
+}
+
+.tag i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #99E2D0;
+    border-radius: 50px;
+    width: 25px;
+    aspect-ratio: 1;
+}
+
+.menu-card:hover .tag {
+    margin-right: 0;
+}
+
+.menu-card:hover .tag i {
+    animation: spin 1s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
 }
 
 /* ORDER BUTTON */
