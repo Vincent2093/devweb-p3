@@ -295,3 +295,82 @@ header i {
     text-decoration: none;
     color: white;
 }
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .top {
+        height: 400px;
+        object-position: center;
+    }
+    
+    .bottom {
+        height: 400px;
+        object-position: center;
+    }
+    
+    .center {
+        height: 400px;
+        object-position: center;
+    }
+
+    .menu-top {
+        margin: 0px 40px;
+    }
+
+    .menu-group {
+        margin: 0 60px;
+    }
+    .order a {
+        font-size: larger;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .top {
+        height: 500px;
+        object-position: center;
+    }
+    
+    .bottom {
+        height: 500px;
+        object-position: center;
+    }
+    
+    .center {
+        height: 500px;
+        object-position: center;
+    }
+
+    .menu-top {
+        margin: 0px 80px;
+    }
+
+    .menu-group {
+        margin: 0 120px;
+    }
+
+    .menu-card {
+        height: 100px;
+    }
+
+    .menu-card-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .price {
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .menu-card .tag {
+        margin-right: -85px;
+        padding: 30px;
+    }
+
+    .order a {
+        font-size: x-large;
+    }
+}
