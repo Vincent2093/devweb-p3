@@ -281,21 +281,13 @@ header {
     }
 
     &__heart {
-        font-size: x-large;
-        position: absolute;
+        @include heart;
 
         &--fill {
-            background: linear-gradient($primary-color, $second-color);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            font-size: x-large;
-            position: relative;
-            opacity: 0;
+            @include heart-fill;
 
             &:hover {
-                opacity: 1;
-                transition: opacity 1s;
+                @include heart-fill-hover;
             }
         }
     }
