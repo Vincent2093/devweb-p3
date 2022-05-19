@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 @import 'variables';
 @import 'mixins';
+@import 'breakpoints';
 
 * {
     box-sizing: border-box;
@@ -29,14 +30,44 @@ header {
 .image {
     &--top {
         @include image-menu(top);
+
+        @include tab {
+            height: 400px;
+            object-position: center;
+        }
+        
+        @include desktop {
+            height: 500px;
+            object-position: center;
+          }
     }
 
     &--bottom {
         @include image-menu(bottom);
+
+        @include tab {
+            height: 400px;
+            object-position: center;
+        }
+
+        @include desktop {
+            height: 500px;
+            object-position: center;
+          }
     }
 
     &--center {
         @include image-menu(center);
+
+        @include tab {
+            height: 400px;
+            object-position: center;
+        }
+
+        @include desktop {
+            height: 500px;
+            object-position: center;
+          }
     }
 }
 
@@ -52,6 +83,14 @@ header {
         align-items: center;
         margin: 0 20px;
         padding-top: 10px;
+
+        @include tab {
+            margin: 0 40px;
+        }
+
+        @include desktop {
+            margin: 0px 80px;
+        }
     }
 
     &__heart {
@@ -74,6 +113,14 @@ header {
 
 .group {
     margin: 0 20px;
+
+    @include tab {
+        margin: 0 60px;
+    }
+
+    @include desktop {
+        margin: 0 120px;
+    }
 
     h3 {
         font-weight: 400;
@@ -101,6 +148,10 @@ header {
         overflow: hidden;
         cursor: pointer;
 
+        @include desktop {
+            height: 100px;
+        }
+
         &:hover {
             .group__card__tag {
                 margin-right: 0;
@@ -120,6 +171,12 @@ header {
         &__description {
             margin: 12px;
             @include hide-text;
+
+            @include desktop {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
         }
 
         &__price {
@@ -129,6 +186,11 @@ header {
             align-items: flex-end;
             margin-right: 25px;
             margin-bottom: 12px;
+
+            @include desktop {
+                align-items: center;
+                margin-bottom: 0;
+            }
         }
 
         &__tag {
@@ -140,6 +202,11 @@ header {
             border-radius: 0 15px 15px 0;
             transition: all 1s;
             background-color: $third-color;
+
+            @include desktop {
+                margin-right: -85px;
+                padding: 30px;
+            }
 
             i {
                 display: flex;
@@ -186,18 +253,14 @@ header {
     justify-content: center;
 
     a {
-        background-image: linear-gradient(to bottom right, $second-color, $primary-color);
-        border-radius: 30px;
-        padding: 15px 20px;
-        color: white;
-        text-decoration: none;
-        margin: 40px 0;
-        box-shadow: 0 10px 20px -10px rgba(0,0,0,0.4);
-        transition: 1s;
+        @include button;
 
-        &:hover {
-            opacity: 0.8;
-            box-shadow: 0px 10px 20px -10px #000000;
+        @include tab {
+            font-size: larger;
+        }
+
+        @include desktop {
+            font-size: x-large;
         }
     }
 }
