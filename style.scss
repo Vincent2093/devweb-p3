@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+@import 'variables';
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $forth-color;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    animation: fog 3s 1s forwards;
+    opacity: 0.9;
+
+    &__spinner {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 9px solid;
+        border-color: $second-color;
+        border-right-color: $primary-color;
+        animation: spin 1s infinite linear;
+    }
+}
+
+@keyframes fog {
+    to  {
+            opacity: 0;
+            z-index: -1;
+        }
+}
+
+@keyframes spin {
+    to { transform: rotate(1turn); }
+}
+
+header {
+    h1 {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    box-shadow: 0px 1px 5px $grey;
+    position: relative;
+    }
+}
+
+.location {
+    text-align: center;
+    background-color: $forth-color;
+    padding: 18px;
+
+    i {
+        font-size: large;
+        color: $dark-color;
+        margin-right: 10px;
+        padding-left: 40px;
+    }
+
+    input {
+        background-color: $forth-color;
+        border: none
+    }
+}
+
+.hero {
+    text-align: center;
+    background-color: #F5F5F5;
+    padding: 50px 30px 70px;
+    margin-bottom: 40px;
+
+    h2 {
+        margin: 0;
+        padding: 0 60px;
+        font-weight: 800;
+    }
+
+    p {
+        color: $grey;
+        font-size: larger;
+        margin-bottom: 50px;
+    }
+
+    a {
+        background-image: linear-gradient(to bottom right, $second-color, $primary-color);
+        border-radius: 30px;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+        margin-bottom: 40px;
+        box-shadow: 0 10px 20px -10px rgba(0,0,0,0.4);
+        transition: 1s;
+
+        &:hover {
+            opacity: 0.8;
+            box-shadow: 0px 10px 20px -10px #000000;
+        }
+    }
+}
+
+.operation {
+    padding: 0 20px;
+    margin-bottom: 50px;
+
+    &__list__card {
+        display: flex;
+        align-items: center;
+        background-color: $light-color;
+        margin: 20px 0 20px 10px;
+        padding: 10px 0;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px -10px rgba(0,0,0,0.4);
+        transition: 1s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #ece2f8;
+        }
+
+        * {
+            margin-right: 20px;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: $primary-color;
+            width: 20px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            margin-left: -10px;
+            font-size: small;
+        }
+
+        i {
+            color: $grey;
+            transition: 1s;
+
+            &:hover {
+                color: $primary-color;
+            } 
+        }
+
+        .fa-mobile-alt {
+            margin-right: 26px;
+        }
+
+        .fa-list-ul {
+            margin-right: 22px;
+        }
+
+        p {
+            font-size: small;
+            font-weight: 600;
+        }
+    }
+}
+
+#restaurant {
+    padding: 40px 20px;
+    background-color: #F5F5F5;
+}
+
+.restaurant__list__card {
+    a {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    }
+
+    img {
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+        height: 180px;
+    }
+
+    &__new {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 7px 12px;
+        background-color: $third-color;
+        color: #378a75;
+        border-radius: 2px;
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px 0 14px;
+        margin-bottom: 14px;
+    }
+
+    &__text h3 {
+        margin: 18px 0 8px 0;
+    }
+
+    &__heart {
+        font-size: x-large;
+        position: absolute;
+
+        &--fill {
+            background: linear-gradient($primary-color, $second-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            font-size: x-large;
+            position: relative;
+            opacity: 0;
+
+            &:hover {
+                opacity: 1;
+                transition: opacity 1s;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $dark-color;
+    padding: 30px 25px;
+    color: white;
+
+    h2 {
+        font-family: $font-shrik;
+        font-size: larger;
+        font-weight: 100;
+        margin: 0 0 20px 0;
+    }
+
+    p {
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    &__utensils {
+        margin-right: 14px;
+    }
+
+    &__helping {
+        margin-right: 8px;
+    }
+}

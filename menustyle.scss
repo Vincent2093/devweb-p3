@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+@import 'variables';
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    h1 {
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+    }
+
+    i{
+        position: absolute;
+        left: 20px;
+        top: 16px;
+        font-size: x-large;
+        color: black;
+    }
+}
+
+.image {
+    &--top {
+        @include image-menu(top);
+    }
+
+    &--bottom {
+        @include image-menu(bottom);
+    }
+
+    &--center {
+        @include image-menu(center);
+    }
+}
+
+.menu {
+    position: relative;
+    margin-top: -40px;
+    border-radius: 30px 30px 0 0;
+    background-color: #F5F5F5;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 20px;
+        padding-top: 10px;
+    }
+
+    &__heart {
+        @include heart;
+
+        &--fill {
+            @include heart-fill;
+
+            &:hover {
+                @include heart-fill-hover;
+            }
+        }
+    }
+
+    h2 {
+        font-family: $font-shrik;
+        letter-spacing: 1px;
+    }
+}
+
+.group {
+    margin: 0 20px;
+
+    h3 {
+        font-weight: 400;
+        position: relative;
+        margin: 18px 0 22px 0;
+
+        &::after {
+        content: "";
+        background-color: $third-color;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        width: 45px;
+        height: 3px;
+        }
+    }
+
+    &__card {
+        display: flex;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px -10px rgba(0,0,0,0.20);
+        margin-bottom: 20px;
+        animation: appear 2s backwards;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover {
+            .group__card__tag {
+                margin-right: 0;
+
+                i {
+                    animation: spin 1s;
+                }
+            }
+        }
+
+        h4 {
+            font-size: larger;
+            margin: 0 0 10px 0;
+            @include hide-text;
+        }
+
+        &__description {
+            margin: 12px;
+            @include hide-text;
+        }
+
+        &__price {
+            font-weight: bold;
+            margin-left: auto;
+            display: flex;
+            align-items: flex-end;
+            margin-right: 25px;
+            margin-bottom: 12px;
+        }
+
+        &__tag {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            margin-right: -75px;
+            padding: 25px;
+            border-radius: 0 15px 15px 0;
+            transition: all 1s;
+            background-color: $third-color;
+
+            i {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                color: $third-color;
+                border-radius: 50px;
+                width: 25px;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+}
+
+@for $i from 0 to 10 {
+    .pos--#{$i} {
+        animation-delay: ($i * 200ms);
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.order {
+    display: flex;
+    justify-content: center;
+
+    a {
+        background-image: linear-gradient(to bottom right, $second-color, $primary-color);
+        border-radius: 30px;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+        margin: 40px 0;
+        box-shadow: 0 10px 20px -10px rgba(0,0,0,0.4);
+        transition: 1s;
+
+        &:hover {
+            opacity: 0.8;
+            box-shadow: 0px 10px 20px -10px #000000;
+        }
+    }
+}
+
+.footer {
+    background-color: $dark-color;
+    padding: 30px 25px;
+    color: white;
+
+    h2 {
+        font-family: $font-shrik;
+        font-size: larger;
+        font-weight: 100;
+        margin: 0 0 20px 0;
+    }
+
+    p {
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    &__utensils {
+        margin-right: 14px;
+    }
+
+    &__helping {
+        margin-right: 8px;
+    }
+}
+
+

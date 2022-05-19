@@ -24,9 +24,6 @@ body {
 }
 
 @keyframes fog {
-    from{
-        opacity: 0.9;
-    }
     to  {
             opacity: 0;
             z-index: -1;
@@ -49,7 +46,6 @@ body {
   
 /* HEADER */
 header h1 {
-    font-family: 'Shrikhand', cursive;
     text-align: center;
     margin: 0;
     padding: 10px;
@@ -153,7 +149,7 @@ header h1 {
     color: white;
     background-color: #9356DC;
     width: 20px;
-    aspect-ratio: 1;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     margin-left: -10px;
     font-size: small;
@@ -212,7 +208,6 @@ header h1 {
 
 .restaurant-card-text h3 {
     margin: 18px 0 8px 0;
-    
 }
 
 .restaurant-card-new {
@@ -240,16 +235,11 @@ header h1 {
     font-size: x-large;
     position: relative;
     opacity: 0;
-    transition: all 1s ease-in;
 }
 
 .heart .fill:hover {
-    background: linear-gradient(#9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
     opacity: 1;
-    transition: all 1s ease;
+    transition: opacity 1s; 
 }
 
 /* FOOTER */
@@ -294,6 +284,7 @@ header h1 {
 
     .operation h2 {
         text-align: center;
+        font-size: 26px;
     }
     
     .operation {
@@ -302,6 +293,7 @@ header h1 {
 
     #restaurant h2 {
         text-align: center;
+        font-size: 26px;
     }
 
     .restaurant-list {
@@ -317,10 +309,12 @@ header h1 {
 
     .operation h2 {
         text-align: center;
+        font-size: 30px;
     }
 
     #restaurant h2 {
         text-align: center;
+        font-size: 30px;
     }
 
     .operation-list {
@@ -349,5 +343,10 @@ header h1 {
 
     .restaurant-card {
         width: 40%;
+        transition: transform 1s;
+    }
+
+    .restaurant-card:hover {
+        transform: scale(1.02);
     }
 }
