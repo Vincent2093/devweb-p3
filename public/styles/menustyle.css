@@ -110,12 +110,12 @@ header i {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-weight: bold;
   font-size: x-large;
   position: relative;
   opacity: 0;
 }
 .menu__heart--fill:hover {
+  font-weight: bold;
   opacity: 1;
   transition: opacity 1s;
   cursor: pointer;
